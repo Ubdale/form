@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" formControlName="email" name="email" placeholder="name@example.com" required>
+          <div *ngIf="f['email'].touched && f['email'].invalid" class="error">
+            <span *ngIf="f['email'].errors?.['required']">Email is required.</span>
+            <span *ngIf="f['email'].errors?.['email']">Enter a valid email.</span>
+          </div>          
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" formControlName="message" name="message" rows="3" required></textarea>
+          
+          <div *ngIf="f['message'].touched && f['message'].invalid" class="error">
+            <span *ngIf="f['message'].errors?.['required']">Message is required.</span>
+            <span *ngIf="f['message'].errors?.['minlength']">Message must be at least 10 characters.</span>
+          </div>
+        </div>
+        
+  <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Submit</button>
+      </form>
+</div>

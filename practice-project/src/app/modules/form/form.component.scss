@@ -1,0 +1,9 @@
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  input.ng-touched.ng-invalid, textarea.ng-touched.ng-invalid {
+    border: 1px solid red;
+  }
+  
