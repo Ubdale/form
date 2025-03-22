@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormService {
-  private apiUrl = 'http://localhost:4000/form';
+  private apiUrl = environment.url;
 
   constructor(private http: HttpClient) {}
 
