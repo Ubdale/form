@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FormService {
-  private apiUrl = 'https://server-pu4rc8c5u-ubdales-projects-04a6989b.vercel.app/form';
+  private apiUrl = 'http://localhost:5000/form';
 
-  constructor(private https: HttpClient) {}
+
+  constructor(private http: HttpClient) {}
 
   submitForm(data: any): Observable<any> {
-    return this.https.post<any>(this.apiUrl, data);
+    return this.http.post<any>(this.apiUrl, data);
   }
 }
