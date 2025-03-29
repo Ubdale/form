@@ -1,4 +1,4 @@
 export const environment = {
        production: true,
-    apiUrl: 'https://form-wine-xi.vercel.app/form'
+    apiUrl: 'https://browser-jt42coxfw-ubdales-projects-04a6989b.vercel.app/form'
 };
