@@ -6,11 +6,15 @@ const app = express();
 app.use(express.json());
 app.use(cors({ origin: 'http://localhost:4200' }));
 
+const DB_NAME = 'formDatabase'
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://ubdaleuddin:z9kwovUQDdQZ0TYf@cluster0.bb3ly.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+
+mongoose.connect('mongodb://localhost:27017/formDatabase')
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
+    mongoose.set('debug', true);
+
 
 // Define Schema & Model
 const formSchema = new mongoose.Schema({
