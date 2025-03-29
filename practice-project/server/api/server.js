@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: "https://browser-hyoemfpn9-ubdales-projects-04a6989b.vercel.app", 
+    origin: "https://client-othwtekfi-ubdales-projects-04a6989b.vercel.app/form", 
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type"
 }));
