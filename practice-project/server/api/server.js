@@ -4,7 +4,11 @@ const cors = require('cors');
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:4200' }));
+app.use(cors({
+    origin: "https://browser-hyoemfpn9-ubdales-projects-04a6989b.vercel.app", 
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type"
+}));
 
 const DB_NAME = 'formDatabase'
 
